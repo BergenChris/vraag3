@@ -1,7 +1,7 @@
 name: vraag3
 on: push
 jobs:
-  download:
+  update:
     runs-on: ubuntu-latest
     steps: 
       - name: Update diagram
@@ -10,6 +10,9 @@ jobs:
         with:
           output_file: "output-diagram.svg"
           artifact_name: "my-diagram"
+  get:
+    runs-on: ubuntu-latest
+    steps:
       - name: Get artifact
         uses: actions/download-artifact@v2
         with:
