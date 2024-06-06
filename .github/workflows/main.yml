@@ -18,4 +18,4 @@ jobs:
         with:
           name: "my-diagram"
           path: "downloads"
-          should_push: false!
+      
