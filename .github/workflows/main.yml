@@ -4,8 +4,9 @@ jobs:
   download:
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/download-artifact@v4
+      - name: Update diagram
+        id: make_diagram
+        uses: githubocto/repo-visualizer@0.7.1
         with:
-          name: my-artifact
-      - name: Display structure of downloaded files
-        run: ls -R
+          output_file: "output-diagram.svg"
+          artifact_name: "my-diagram"
